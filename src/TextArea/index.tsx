@@ -24,7 +24,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
       className,
       ...props
     },
-    ref,
+    ref
   ) => {
     const isError = error || errorMessage;
 
@@ -39,10 +39,10 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         )}
         <textarea
           className={cn(
-            "flex w-full rounded-[8px] border border-neutral-300 bg-transparent px-3 py-2 text-textMD text-neutral-900 placeholder:text-neutral-500 focus:outline-none focus:border-primary-500 focus:shadow-[0_0_0_4px_#DBDDFF]",
+            "flex w-full rounded-[8px] border border-neutral-300 bg-transparent px-3 py-2 text-textMD text-neutral-900 placeholder:text-neutral-500 focus:outline-none focus:border-primary-500 focus:shadow-[0_0_0_4px_#D7F4E7]",
             isError &&
               "border-red-500 focus:border-red-500 focus:shadow-[#FDE4E2]",
-            className,
+            className
           )}
           ref={ref}
           {...props}
@@ -56,7 +56,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         )}
       </div>
     );
-  },
+  }
 );
 Textarea.displayName = "Textarea";
 

@@ -5,7 +5,7 @@ import { cn } from "../lib/utils";
 
 const variantsPrimary = {
   color: {
-    blue: "bg-primary-500 hover:bg-primary-600 active:bg-primary-700 border-primary-500 focus:shadow-[#DBDDFF] text-white focus:shadow-[0_0_0_4px]",
+    blue: "bg-primary-500 hover:bg-primary-600 active:bg-primary-700 border-primary-500 focus:shadow-[#D7F4E7] text-white focus:shadow-[0_0_0_4px]",
     destructive:
       "bg-destructive-500 hover:bg-destructive-600 active:bg-destructive-700 border-destructive-400 focus:shadow-[#FDE4F2] text-white focus:shadow-[0_0_0_4px]",
 
@@ -30,7 +30,7 @@ const variantsPrimary = {
 const variantsSecondary = {
   ...variantsPrimary,
   color: {
-    blue: "bg-primary-25 hover:bg-primary-50 active:bg-primary-100 focus:shadow-[#DBDDFF] border-primary-500 text-primary-500 border border-solid focus:shadow-[0_0_0_4px]",
+    blue: "bg-primary-25 hover:bg-primary-50 active:bg-primary-100 focus:shadow-[#D7F4E7] border-primary-500 text-primary-500 border border-solid focus:shadow-[0_0_0_4px]",
     destructive:
       "bg-inherit hover:bg-destructive-100 active:bg-destructive-200 border-destructive-400 focus:shadow-[#FDE4F2] text-destructive-500 border border-solid focus:shadow-[0_0_0_4px]",
     gray: "bg-inherit hover:bg-gray-100 active:bg-gray-300 border-gray-400 focus:shadow-[#EAECF0] text-black border border-solid focus:shadow-[0_0_0_4px]",
@@ -40,7 +40,7 @@ const variantsSecondary = {
 const variantsTertiary = {
   ...variantsPrimary,
   color: {
-    blue: "bg-inherit hover:bg-primary-50 active:bg-primary-100 focus:shadow-[#DBDDFF] border-primary-500 text-primary-500 ",
+    blue: "bg-inherit hover:bg-primary-50 active:bg-primary-100 focus:shadow-[#D7F4E7] border-primary-500 text-primary-500 ",
     destructive:
       "bg-inherit hover:bg-destructive-100 active:bg-destructive-200 border-destructive-400 focus:shadow-[#FDE4F2] text-destructive-500",
     gray: "bg-inherit hover:bg-gray-100 active:bg-gray-300 border-gray-400 focus:shadow-[#EAECF0] text-black",
@@ -61,25 +61,25 @@ const buttonVariantsPrimary = cva(
   "flex items-center font-semibold justify-center rounded-md text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background",
   {
     variants: variantsPrimary,
-  },
+  }
 );
 const buttonVariantsSeCondary = cva(
   "flex items-center font-semibold justify-center rounded-md text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background",
   {
     variants: variantsSecondary,
-  },
+  }
 );
 const buttonVariantsTetryary = cva(
   "flex items-center font-semibold justify-center rounded-md text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background",
   {
     variants: variantsTertiary,
-  },
+  }
 );
 const buttonVariantsLink = cva(
   "flex items-center font-semibold justify-center rounded-md text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background",
   {
     variants: variantsLink,
-  },
+  }
 );
 
 export interface IconButtonProps
@@ -106,7 +106,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
       loading,
       ...props
     },
-    ref,
+    ref
   ) => {
     const Comp = "button";
     return (
@@ -140,7 +140,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
                 color,
                 size,
                 hierarchy: hierarchy,
-              }),
+              })
         )}
         ref={ref}
         {...props}
@@ -153,7 +153,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
         ></span>
       </Comp>
     );
-  },
+  }
 );
 
 IconButton.displayName = "IconButton";

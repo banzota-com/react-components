@@ -32,7 +32,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       btmSize = "sm",
       ...props
     },
-    ref,
+    ref
   ) => {
     const isError = error || errorMessage;
     let sizeClass = "py-[7px]";
@@ -60,7 +60,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           </div>
         )}
         <div
-          className={`bg-transparent flex gap-2 justify-between items-center px-[12px] rounded-[6px] border border-gray-300 focus-within:border-primary-500 focus-within:shadow-[0_0_0_4px_#DBDDFF] ${
+          className={`bg-transparent flex gap-2 justify-between items-center px-[12px] rounded-[6px] border border-gray-300 focus-within:border-primary-500 focus-within:shadow-[0_0_0_4px_#D7F4E7] ${
             isError &&
             "border-red-500 focus-within:border-red-500 focus-within:shadow-[#FDE4E2]"
           } ${sizeClass} ${inputWrapperClassName}`}
@@ -87,7 +87,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         )}
       </div>
     );
-  },
+  }
 );
 Input.displayName = "Input";
 

@@ -58,9 +58,9 @@ module.exports = {
       },
 
       boxShadow: {
-        primary: "0 0 0 4px #DBDDFF",
+        primary: "0 0 0 4px #D7F4E7",
         gray: "0 0 0 4px #EAECF0",
-        secondary: "0 0 0 4px #DBDDFF",
+        secondary: "0 0 0 4px #D7F4E7",
         danger: "0 0 0 4px #FDE4F2",
       },
 

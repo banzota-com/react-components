@@ -45,7 +45,7 @@ const MultipleSelect: React.FC<MultipleSelectProps> = ({
   if (listSelected.length > 0) {
     // Upper first letter of the first selected item
     const transformSelectedText = upperFirst(
-      listSelected[0].altLabel?.toLowerCase(),
+      listSelected[0].altLabel?.toLowerCase()
     );
 
     // Add the number of selected items to the placeholder
@@ -61,7 +61,7 @@ const MultipleSelect: React.FC<MultipleSelectProps> = ({
     const { value, label } = item;
     if (listSelected.find((select) => select.value === value)) {
       const selectedItems = listSelected.filter(
-        (select) => select.value !== value && select.label !== label,
+        (select) => select.value !== value && select.label !== label
       );
 
       setListSelected(selectedItems);
@@ -85,7 +85,7 @@ const MultipleSelect: React.FC<MultipleSelectProps> = ({
         asChild
         className={cn(
           "flex w-fit items-center justify-center rounded-[6px] cursor-pointer border border-gray-300 p-0",
-          open && "border border-primary shadow-[0_0_0_3px] shadow-[#DBDDFF]",
+          open && "border border-primary shadow-[0_0_0_3px] shadow-[#D7F4E7]"
         )}
       >
         <div className="px-[12px] py-[8px] flex items-center justify-center gap-2">
@@ -112,7 +112,7 @@ const MultipleSelect: React.FC<MultipleSelectProps> = ({
                     <Checkbox
                       checked={
                         !!listSelected?.find(
-                          (select) => select.value === i.value,
+                          (select) => select.value === i.value
                         )
                       }
                     />
@@ -120,7 +120,7 @@ const MultipleSelect: React.FC<MultipleSelectProps> = ({
                   </div>
                 ))}
               </div>
-            )),
+            ))
           )}
         </div>
         <div

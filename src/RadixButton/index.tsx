@@ -18,7 +18,7 @@ const buttonSizeVariant = {
 
 const variantsPrimary = {
   color: {
-    blue: "bg-gradient-to-br from-[#4B56F3] to-[#4C25D3] hover:bg-gradient-to-tl transition duration-200 active:bg-primary-700 border-primary-500 focus:shadow-[#DBDDFF] text-white focus:shadow-[0_0_0_4px]",
+    blue: "bg-gradient-to-br from-[#1B8068] to-[#1B8068] hover:bg-gradient-to-tl transition duration-200 active:bg-primary-700 border-primary-500 focus:shadow-[#D7F4E7] text-white focus:shadow-[0_0_0_4px]",
     destructive:
       "bg-destructive-500 hover:bg-destructive-600 active:bg-destructive-700 border-destructive-400 focus:shadow-[#FDE4F2] text-white focus:shadow-[0_0_0_4px]",
 
@@ -29,7 +29,7 @@ const variantsPrimary = {
 
 const variantsSecondary = {
   color: {
-    blue: "bg-primary-25 hover:bg-primary-50 active:bg-primary-100 focus:shadow-[#DBDDFF] border-primary-500 text-primary-500 border border-solid focus:shadow-[0_0_0_4px]",
+    blue: "bg-primary-25 hover:bg-primary-50 active:bg-primary-100 focus:shadow-[#D7F4E7] border-primary-500 text-primary-500 border border-solid focus:shadow-[0_0_0_4px]",
     destructive:
       "bg-inherit hover:bg-destructive-100 active:bg-destructive-200 border-destructive-400 focus:shadow-[#FDE4F2] text-destructive-500 border border-solid focus:shadow-[0_0_0_4px]",
     gray: "bg-gray-200 hover:bg-gray-300 active:bg-gray-300 focus:bg-primary-100 text-black border border-solid active:bg-gray-400",
@@ -39,7 +39,7 @@ const variantsSecondary = {
 
 const variantsTertiary = {
   color: {
-    blue: "bg-inherit hover:bg-primary-50 active:bg-primary-100 focus:shadow-[#DBDDFF] border-primary-500 text-primary-500 ",
+    blue: "bg-inherit hover:bg-primary-50 active:bg-primary-100 focus:shadow-[#D7F4E7] border-primary-500 text-primary-500 ",
     destructive:
       "bg-inherit hover:bg-destructive-100 active:bg-destructive-200 border-destructive-400 focus:shadow-[#FDE4F2] text-destructive-500",
     gray: "bg-inherit hover:bg-gray-100 active:bg-gray-300 border-gray-400 focus:shadow-[#EAECF0] text-black",

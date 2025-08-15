@@ -31,16 +31,16 @@ interface IRangeDatePicker {
 
 const generateDateRangeFromDefaultValue = (
   timezoneDate: string,
-  defaultValue?: RangeDatePickerDefaultValues,
+  defaultValue?: RangeDatePickerDefaultValues
 ): DateRange => {
   switch (defaultValue) {
     case RangeDatePickerDefaultValues.TODAY:
       return {
         from: new Date(
-          moment().toDate().toLocaleString("en-US", { timeZone: timezoneDate }),
+          moment().toDate().toLocaleString("en-US", { timeZone: timezoneDate })
         ),
         to: new Date(
-          moment().toDate().toLocaleString("en-US", { timeZone: timezoneDate }),
+          moment().toDate().toLocaleString("en-US", { timeZone: timezoneDate })
         ),
       };
     case RangeDatePickerDefaultValues.THIS_WEEK:
@@ -74,7 +74,7 @@ export default function RangeDatePicker(props: IRangeDatePicker) {
   // moment.tz.setDefault(timezoneDate);
 
   const [datePicker, setDatePicker] = React.useState<DateRange | undefined>(
-    generateDateRangeFromDefaultValue(timezoneDate, defaultValues),
+    generateDateRangeFromDefaultValue(timezoneDate, defaultValues)
   );
 
   const [open, setOpen] = React.useState<boolean>(false);
@@ -91,13 +91,13 @@ export default function RangeDatePicker(props: IRangeDatePicker) {
   // };
 
   const [valueSelected, setValueSelected] = React.useState<string>(
-    defaultValues ?? "",
+    defaultValues ?? ""
   );
 
   React.useEffect(() => {
     const dateRange = generateDateRangeFromDefaultValue(
       timezoneDate,
-      defaultValues,
+      defaultValues
     );
     setDatePicker(dateRange);
   }, [defaultValues]);
@@ -127,7 +127,7 @@ export default function RangeDatePicker(props: IRangeDatePicker) {
       date.getMonth() + 1
     }-${date.getDate()} ${type === "start" ? "00:00:00" : "24:00:00"}`;
     return new Date(
-      `${newDate}${moment(newDate).tz(timezoneDate).format("Z")}`,
+      `${newDate}${moment(newDate).tz(timezoneDate).format("Z")}`
     );
   }
 
@@ -139,9 +139,9 @@ export default function RangeDatePicker(props: IRangeDatePicker) {
             id="date"
             className={cn(
               `w-fit justify-start text-left font-normal px-4 py-2 rounded-[6px] border-[1px] border-gray-300 flex items-center h-10 text-ellipsis whitespace-nowrap ${
-                open ? "shadow-[#DBDDFF] shadow-[0_0_0_4px]" : ""
+                open ? "shadow-[#D7F4E7] shadow-[0_0_0_4px]" : ""
               }`,
-              !datePicker && "text-muted-foreground",
+              !datePicker && "text-muted-foreground"
             )}
           >
             <CalendarIcon className="mr-2 h-4 w-4" />
@@ -171,12 +171,12 @@ export default function RangeDatePicker(props: IRangeDatePicker) {
                     from: new Date(
                       moment()
                         .toDate()
-                        .toLocaleString("en-US", { timeZone: timezoneDate }),
+                        .toLocaleString("en-US", { timeZone: timezoneDate })
                     ),
                     to: new Date(
                       moment()
                         .toDate()
-                        .toLocaleString("en-US", { timeZone: timezoneDate }),
+                        .toLocaleString("en-US", { timeZone: timezoneDate })
                     ),
                   });
                 }}
@@ -266,8 +266,8 @@ export default function RangeDatePicker(props: IRangeDatePicker) {
                         from: new Date(convertDate(datePicker?.from, "start")),
                         to: new Date(
                           new Date(
-                            convertDate(datePicker?.from, "end"),
-                          ).getTime(),
+                            convertDate(datePicker?.from, "end")
+                          ).getTime()
                         ),
                       });
                       setDatePicker({
@@ -278,9 +278,7 @@ export default function RangeDatePicker(props: IRangeDatePicker) {
                       setDate({
                         from: new Date(convertDate(datePicker.from, "start")),
                         to: new Date(
-                          new Date(
-                            convertDate(datePicker?.to, "end"),
-                          ).getTime(),
+                          new Date(convertDate(datePicker?.to, "end")).getTime()
                         ),
                       });
                     } else {

@@ -60,7 +60,7 @@ export default function MultiplechoiceSelect(props: {
       setValue(`${content}: ${allSelected[0]}`);
     } else {
       setValue(
-        `${content}: ${allSelected[0] + " (" + (allSelected.length - 1)}+)`,
+        `${content}: ${allSelected[0] + " (" + (allSelected.length - 1)}+)`
       );
     }
     callbackListSelected && callbackListSelected(allSelected);
@@ -77,7 +77,7 @@ export default function MultiplechoiceSelect(props: {
           asChild
           onClick={() => setOpen(true)}
           className={`flex justify-center items-center p-0 m-0 rounded-[6px] ${
-            open ? "shadow-[#DBDDFF] shadow-[0_0_0_3px]" : ""
+            open ? "shadow-[#D7F4E7] shadow-[0_0_0_3px]" : ""
           }`}
         >
           <div className="w-fit h-fit">
@@ -135,7 +135,7 @@ export default function MultiplechoiceSelect(props: {
                   onClick={() => {
                     if (allSelected.find((select) => select === item)) {
                       setAllSelected(
-                        allSelected.filter((select) => select !== item),
+                        allSelected.filter((select) => select !== item)
                       );
                       onCheckedChange && onCheckedChange(false);
                     } else {
@@ -153,7 +153,7 @@ export default function MultiplechoiceSelect(props: {
                           setAllSelected([...allSelected, item]);
                         } else {
                           setAllSelected(
-                            allSelected.filter((select) => select !== item),
+                            allSelected.filter((select) => select !== item)
                           );
                         }
                       }}
@@ -176,14 +176,14 @@ export default function MultiplechoiceSelect(props: {
                     onClick={() => {
                       if (allSelected.find((select) => select === i.value)) {
                         setAllSelected(
-                          allSelected.filter((select) => select !== i.value),
+                          allSelected.filter((select) => select !== i.value)
                         );
                         setListSelected(
                           listSelected.filter(
                             (select) =>
                               select.value !== i.value &&
-                              select.label !== i.label,
-                          ),
+                              select.label !== i.label
+                          )
                         );
                       } else {
                         setAllSelected([...allSelected, i.value]);
@@ -202,9 +202,7 @@ export default function MultiplechoiceSelect(props: {
                             setAllSelected([...allSelected, i.value]);
                           } else {
                             setAllSelected(
-                              allSelected.filter(
-                                (select) => select !== i.value,
-                              ),
+                              allSelected.filter((select) => select !== i.value)
                             );
                           }
                         }}

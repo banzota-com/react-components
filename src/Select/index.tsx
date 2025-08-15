@@ -61,7 +61,7 @@ export default function Select(props: {
         className={`${width} ${
           size === "xs" ? "h-10" : size === "md" ? "h-12" : "h-10"
         } border-gray-300 py-2 border-[1px] border-solid rounded-[8px] gap-[8px] flex justify-start focus:outline-none ${
-          open ? "shadow-[#DBDDFF] shadow-[0_0_0_4px]" : ""
+          open ? "shadow-[#D7F4E7] shadow-[0_0_0_4px]" : ""
         }`}
       >
         {icon}

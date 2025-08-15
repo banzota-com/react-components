@@ -55,7 +55,7 @@ export default function ComboboxDemo(props: IComboboxProps) {
               : "text-gray-500"
           } ${
             open
-              ? "border-primary-500 shadow-[0_0_0_4px] shadow-[#DBDDFF]"
+              ? "border-primary-500 shadow-[0_0_0_4px] shadow-[#D7F4E7]"
               : "border-gray-300"
           }`}
         >
@@ -118,7 +118,7 @@ export default function ComboboxDemo(props: IComboboxProps) {
                       "ml-auto h-5 w-5 text-primary-500",
                       idsSelected === i.value.toString()
                         ? "opacity-100"
-                        : "opacity-0",
+                        : "opacity-0"
                     )}
                   />
                 </CommandItem>
